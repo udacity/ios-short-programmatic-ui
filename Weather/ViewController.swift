@@ -143,18 +143,14 @@ class ViewController: UIViewController {
     }()
     
     // MARK: Initializers
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .white
         
         addSubviews()
         setupConstraints()
         addGestureRecognizer()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override var prefersStatusBarHidden: Bool {
