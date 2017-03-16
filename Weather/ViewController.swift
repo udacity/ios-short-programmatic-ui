@@ -142,8 +142,8 @@ class ViewController: UIViewController {
         return label
     }()
     
-    // MARK: Initializers
-        
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -152,6 +152,8 @@ class ViewController: UIViewController {
         setupConstraints()
         addGestureRecognizer()
     }
+    
+    // MARK: Status Bar
     
     override var prefersStatusBarHidden: Bool {
         return true
