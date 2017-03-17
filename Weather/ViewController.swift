@@ -147,6 +147,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        backgroundImageView.frame = view.frame
         
         addSubviews()
         setupConstraints()
@@ -162,7 +163,6 @@ class ViewController: UIViewController {
     // MARK: Setup
     
     func addSubviews() {
-        backgroundImageView.frame = view.frame
         view.addSubview(backgroundImageView)
         
         controlView.addSubview(menuButton)
