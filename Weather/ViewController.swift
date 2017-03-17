@@ -16,32 +16,32 @@ class ViewController: UIViewController {
     
     var showControls = true
     
-    lazy var backgroundImageView: UIImageView = {
+    let backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "sunset"))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    lazy var controlView: UIView = {
+    let controlView: UIView = {
         let view = UIView(frame: .zero)
         return view
     }()
     
-    lazy var menuButton: UIButton = {
+    let menuButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setImage(#imageLiteral(resourceName: "menu"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         return button
     }()
     
-    lazy var locationStackView: UIStackView = {
+    let locationStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually        
         return stackView
     }()
     
-    lazy var locationLabel: UILabel = {
+    let locationLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Madison"
         label.font = UIFont.systemFont(ofSize: 20)
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         return label
     }()
     
-    lazy var timeLabel: UILabel = {
+    let timeLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "3:59 PM CST"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         return label
     }()
     
-    lazy var addButton: UIButton = {
+    let addButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setImage(#imageLiteral(resourceName: "add"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
@@ -68,14 +68,14 @@ class ViewController: UIViewController {
     
     // MARK: Weather UI
     
-    lazy var weatherStackView: UIStackView = {
+    let weatherStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillProportionally
         stackView.axis = .vertical
         return stackView
     }()
     
-    lazy var conditionsStackView: UIStackView = {
+    let conditionsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 20
         
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         return stackView
     }()
     
-    lazy var highLowStackView: UIStackView = {
+    let highLowStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
         stackView.spacing = 5
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         return stackView
     }()
     
-    lazy var temperatureLabel: UILabel = {
+    let temperatureLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 120, weight: -1)
         label.textAlignment = .left
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
     
     // MARK: Copyright UI
     
-    lazy var copyrightLabel: UILabel = {
+    let copyrightLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .right
@@ -204,7 +204,7 @@ class ViewController: UIViewController {
             "H:|-[controlView]-|",
             "H:|[menuButton(40)]-[locationStackView]-[addButton(40)]|",
             "V:[topLayoutGuide]-[controlView(40)]",
-            "V:|[locationStackView(40)]",
+            "V:|[locationStackView]",
             "V:|[menuButton(40)]",
             "V:|[addButton(40)]",
             "H:|-18-[weatherStackView]",
